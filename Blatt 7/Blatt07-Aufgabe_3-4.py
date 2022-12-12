@@ -24,7 +24,7 @@ import cv2
 # Ausgabe ihren Erwartungen?
 
 
-# fftshift ordent die Quadranten der FFT so an, dass die Mittelwert Komponente der
+# fft-shift ordent die Quadranten der FFT so an, dass die Mittelwertkomponente der
 # Fourier Transformation in der Mitte des Ausgabebildes liegt.
 
 
@@ -32,7 +32,7 @@ import cv2
 
 
 """ Multimedia Grundlagen 1 - Blatt 7, Aufgabe 4 """
-# Schreiben Sie eine Funktion, die die i x j Basismatrix eines M x N Fouriestransformation
+# Schreiben Sie eine Funktion, die die i x j Basismatrix eines M x N Fouriertransformation
 # gemäß den Vorlesungsfolien (VL: Digitale Bildrepräsentation, Folie 28)
 
 

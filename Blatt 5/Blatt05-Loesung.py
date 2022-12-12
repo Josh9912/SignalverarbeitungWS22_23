@@ -4,8 +4,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 r""" Die folgenden Funktionen sind gegeben: """
+
 
 def plotSignal(x, y, pos, plotTitle, color, definitionsbereich, wertebereich):
     """
@@ -20,7 +20,7 @@ def plotSignal(x, y, pos, plotTitle, color, definitionsbereich, wertebereich):
     """
     plt.subplot(3, 1, pos)
     plt.plot(x, y, color=color)
-    plt.ylim([wertebereich[0]-0.3, wertebereich[1]+0.3])
+    plt.ylim([wertebereich[0] - 0.3, wertebereich[1] + 0.3])
     plt.xlim(definitionsbereich)
     plt.grid(True, which='both')
     plt.title(plotTitle)
@@ -32,12 +32,13 @@ def sigFunc(x):
     :param x: Zeitpunkte zu denen die Signalwerte berechnet werden sollen.
     :return: Die berechneten Signalwerte
     """
-    return np.sin(2 * np.pi * 10 * x) + np.cos(2 * np.pi * 20 * x) 
+    return np.sin(2 * np.pi * 10 * x) + np.cos(2 * np.pi * 20 * x)
 
 
 r"""############################################################################
 Sie sind dran:
 #############################################################################"""
+
 
 def showFourierTransform(abtastperiode, definitionsbereich):
     r"""
@@ -71,9 +72,9 @@ def showFourierTransform(abtastperiode, definitionsbereich):
             dft_sum = dft_sum + ys[n] * np.exp(-1j * 2 * np.pi * n * k / N)
         betraege[k] = np.abs(dft_sum)
         phasen[k] = np.angle(dft_sum)
-    
-    #phasen = np.where(betraege > 1e-5, phasen, 0)
-    
+
+    # phasen = np.where(betraege > 1e-5, phasen, 0)
+
     # Normierung der Betraege und Berechnung der Achsenindices.
     betraege = betraege / (N / 2)
     abtastfrequenz = 1.0 / abs(abtastperiode)
@@ -92,4 +93,3 @@ def showFourierTransform(abtastperiode, definitionsbereich):
 
 
 showFourierTransform(abtastperiode=0.01, definitionsbereich=[-0.2, 0.2])
-

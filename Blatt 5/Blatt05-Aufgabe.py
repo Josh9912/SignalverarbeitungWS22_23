@@ -4,8 +4,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 r""" Die folgenden Funktionen sind gegeben: """
+
 
 def plotSignal(x, y, pos, plotTitle, color, definitionsbereich, wertebereich):
     """
@@ -20,7 +20,7 @@ def plotSignal(x, y, pos, plotTitle, color, definitionsbereich, wertebereich):
     """
     plt.subplot(3, 1, pos)
     plt.plot(x, y, color=color)
-    plt.ylim([wertebereich[0]-0.3, wertebereich[1]+0.3])
+    plt.ylim([wertebereich[0] - 0.3, wertebereich[1] + 0.3])
     plt.xlim(definitionsbereich)
     plt.grid(True, which='both')
     plt.title(plotTitle)
@@ -49,7 +49,7 @@ def showFourierTransform(abtastperiode, definitionsbereich):
 
     # ... #
 
-    plt.show() # Zum Anzeigen des Plots am Ende
-	
-	
+    plt.show()  # Zum Anzeigen des Plots am Ende
+
+
 showFourierTransform(abtastperiode=0.01, definitionsbereich=[-0.2, 0.2])
